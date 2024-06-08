@@ -1,0 +1,25 @@
+
+def getPrimeFactors(myNumber):
+  i = 2
+  primeFactors = []
+  
+  while i < myNumber:
+    
+    if myNumber % i == 0:
+      primeFactors.append(i)
+      myNumber = (myNumber // i)
+    else:
+      i+= 1
+  
+  if primeFactors.count == 0:
+    primeFactors.append(myNumber)
+
+  print(primeFactors)
+
+
+def main():
+  myNumber = input('Please enter a number to check?\n')
+
+  getPrimeFactors(int(myNumber))
+
+main()
